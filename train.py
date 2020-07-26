@@ -19,6 +19,8 @@ def evaluate_test_data_for_model(model, X_test, y_test):
 if __name__ == "__main__":
     
     min_samples_split = float(sys.argv[1]) if len(sys.argv) > 1 else 2
+    if min_samples_split > 1.0:
+        min_samples_split = int(min_samples_split)
     max_depth = int(sys.argv[2]) if len(sys.argv) > 2 else 20
     n_estimators = int(sys.argv[3]) if len(sys.argv) > 3 else 100
     max_features = sys.argv[4] if len(sys.argv) > 4 else 'auto'
