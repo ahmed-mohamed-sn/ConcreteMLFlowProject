@@ -1,14 +1,15 @@
+name: concrete-example
 channels:
 - defaults
+- anaconda
 - conda-forge
 dependencies:
 - python=3.7.7
 - scikit-learn=0.23.1
-- pandas=1.0.5
 - pip
 - pip:
-  - mlflow
-  - cloudpickle==1.5.0
+  - mlflow==1.10.0
   - yellowbrick==1.1
   - mlflow-extend==0.1.6
+  - pandas==1.0.5
 name: mlflow-env
