@@ -5,5 +5,6 @@ conda_env: conda.yaml
 entry_points:
   main:
     parameters:
-      file_path: {type: str, default: 'sample.csv'}
-    command: "python evaluate.py {file_path}"
+      X: {type: str, default: 'X_sample.csv'}
+      y: {type: str, default: 'y_sample.csv'}
+    command: "python evaluate.py {X} {y}"

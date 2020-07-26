@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ahmedmohamed/IdeaProjects/mlflow/LPDI-Examples/ConcreteMLFlowProject/mlruns/0/9cdd2d969e7647c0a6d187397e3c33bf/artifacts
+end_time: 1595764026345
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 9cdd2d969e7647c0a6d187397e3c33bf
+run_uuid: 9cdd2d969e7647c0a6d187397e3c33bf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1595764026322
+status: 4
+tags: []
+user_id: ahmedmohamed
