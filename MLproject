@@ -3,6 +3,13 @@ name: concrete-example
 conda_env: conda.yaml
 
 entry_points:
+  training:
+    parameters:
+      min_samples_split: {type: float, default: 2.0}
+      max_depth: {type: int, default: 20}
+      n_estimators: {type: int, default: 100}
+      max_features: {type: str, default: 'auto'}
+    command: "python train.py {min_samples_split} {max_depth} {n_estimators} {max_features}"
   main:
     parameters:
       X: {type: str, default: 'X_sample.csv'}
