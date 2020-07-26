@@ -3,6 +3,7 @@ import sys
 import pandas as pd
 import mlflow
 import mlflow.sklearn
+from mlflow_extend import mlflow as mlflow_extend
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.ensemble import RandomForestRegressor
@@ -45,6 +46,10 @@ if __name__ == "__main__":
                                          n_estimators=n_estimators,
                                          max_features=max_features,
                                          random_state=7)
+        
+        mlflow_extend.log_df(X_train, 'X_train.csv')
+        mlflow_extend.log_df(y_train, 'y_train.csv')
+        
         rf_model.fit(X_train, y_train)
     
         r2, mae = evaluate_test_data_for_model(rf_model, X_test, y_test)
