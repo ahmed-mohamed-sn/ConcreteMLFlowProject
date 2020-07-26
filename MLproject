@@ -3,7 +3,6 @@ name: concrete-example
 conda_env: conda.yaml
 
 entry_points:
-  training:
   main:
     parameters:
       min_samples_split: {type: int, default: 2}
