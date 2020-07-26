@@ -1,0 +1,9 @@
+name: concrete-example
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      file_path: {type: str, default: 'sample.csv'}
+    command: "python serve.py {file_path}"
