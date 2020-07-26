@@ -4,7 +4,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.ensemble import RandomForestRegressor
-from yellowbrick.datasets import load_concrete
 from mlflow_extend import mlflow as mlflow_extend
 import mlflow
 import mlflow.sklearn
@@ -24,8 +23,7 @@ if __name__ == "__main__":
     n_estimators = int(sys.argv[3]) if len(sys.argv) > 3 else 100
     max_features = sys.argv[4] if len(sys.argv) > 4 else 'auto'
     
-    dataset = load_concrete(return_dataset=True)
-    df = dataset.to_dataframe()
+    df = pd.read_csv('concrete.csv')
     
     target = 'strength'
     X = df.drop(target, axis=1).copy()

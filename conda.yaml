@@ -9,7 +9,6 @@ dependencies:
 - pip
 - pip:
   - mlflow==1.10.0
-  - yellowbrick==1.1
   - mlflow-extend==0.1.6
   - pandas==1.0.5
 name: mlflow-env
