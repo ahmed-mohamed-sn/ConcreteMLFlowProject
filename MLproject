@@ -6,4 +6,4 @@ entry_points:
   main:
     parameters:
       file_path: {type: str, default: 'sample.csv'}
-    command: "python serve.py {file_path}"
+    command: "python evaluate.py {file_path}"
